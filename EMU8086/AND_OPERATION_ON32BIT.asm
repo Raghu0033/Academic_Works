@@ -1,0 +1,15 @@
+; 64 BIT AND OPERATION
+MOV SI,2000H
+MOV DI,3000H
+MOV CL,4
+
+LOOP1:
+    MOV AX,[SI]
+    MOV BX,[DI]
+    AND AX, BX
+    MOV [SI],AX
+    
+    ADD SI,2 
+    ADD DI,2
+    LOOP LOOP1
+HLT

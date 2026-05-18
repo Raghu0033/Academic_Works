@@ -1,0 +1,8 @@
+; FACTORIAL 
+MOV BX,05 H
+MOV AX,01H
+L1:
+   MUL BX
+   DEC BX
+   JNZ L1
+HLT 

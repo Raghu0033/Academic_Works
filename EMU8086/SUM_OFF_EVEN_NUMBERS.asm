@@ -1,0 +1,20 @@
+; array  arr=[2,3,4,5,6,7,8,9,0]
+
+MOV SI,1000H
+MOV DI,2000H
+MOV CL,10
+MOV BL,0
+MOV BH,2
+
+L1:
+MOV AL,[SI]
+DIV BH
+CMP AH,0
+JNZ L2
+ADD BL,[SI]
+
+    
+L2: 
+INC SI
+LOOP L1
+HLT
